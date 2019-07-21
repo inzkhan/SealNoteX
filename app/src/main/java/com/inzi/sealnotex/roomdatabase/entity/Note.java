@@ -1,4 +1,4 @@
-package com.inzi.sealnotex.roomdatabase;
+package com.inzi.sealnotex.roomdatabase.entity;
 
 
 import androidx.annotation.NonNull;
