@@ -1,38 +1,40 @@
 package com.inzi.sealnotex.roomdatabase;
 
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "notes")
 public class Note {
 
-    @PrimaryKey
-    private String Id;
-    private String position;
+    @PrimaryKey(autoGenerate = true)
+    private int Id;
+    private int position;
     private String title;
     private String content;
     private String extra_content;
-    private String color;
+    private int color;
     private String created;
     private String edited;
-    private String archived;
-    private String deleted;
+    private int archived = 0;
+    private int deleted = 0;
     private String type;
 
-    public String getId() {
+    public int getId() {
         return Id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         Id = id;
     }
 
-    public String getPosition() {
+    public int getPosition() {
         return position;
     }
 
-    public void setPosition(String position) {
+    public void setPosition(int position) {
         this.position = position;
     }
 
@@ -60,11 +62,11 @@ public class Note {
         this.extra_content = extra_content;
     }
 
-    public String getColor() {
+    public int getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(int color) {
         this.color = color;
     }
 
@@ -84,19 +86,19 @@ public class Note {
         this.edited = edited;
     }
 
-    public String getArchived() {
+    public int getArchived() {
         return archived;
     }
 
-    public void setArchived(String archived) {
+    public void setArchived(int archived) {
         this.archived = archived;
     }
 
-    public String getDeleted() {
+    public int getDeleted() {
         return deleted;
     }
 
-    public void setDeleted(String deleted) {
+    public void setDeleted(int deleted) {
         this.deleted = deleted;
     }
 
